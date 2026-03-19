@@ -5,8 +5,12 @@ const router = express.Router();
 router.post('', async (req, res) => {
     try {
         let model = req.body
-        let result = await addProduct(model)
-        res.send(result)
+        let result = await addProduct(model);
+
+         res.status(200).json({
+            message: "Product created!",
+            data: result
+        })
     } catch (err) {
         res.status(500).json({ message: 'Error in adding product ', error: err })
     }

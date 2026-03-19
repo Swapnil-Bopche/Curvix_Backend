@@ -8,7 +8,10 @@ router.post('', async (req, res) => {
         let model = req.body;
         let result = await addEmployee(model)
 
-        res.send(result)
+         res.status(200).json({
+            message: "Employee added!",
+            data: result
+        })
 
 
     } catch (err) {

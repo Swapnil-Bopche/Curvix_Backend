@@ -7,21 +7,25 @@ const productSchema = new mongoose.Schema({
     tag: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Tag",
-        required :true
+        required: true
     },
     brand: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Brand",
-        required :true
+        required: true
     },
+    discount: {
+        type: Number,
+        required: true
+    },
+
     price: {
         type: Number,
         required: true
     },
-  
-    stock:{
-        type:Number,
-        default:1
+    stock: {
+        type: Number,
+        default: 1
     },
     isDeleted: {
         type: Boolean,

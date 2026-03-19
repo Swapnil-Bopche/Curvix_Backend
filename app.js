@@ -4,7 +4,7 @@ const cors = require("cors")
 const app = express()
 const port = 1600;
 
-app.use(cors())
+app.use(cors());
 
 const customerRoute = require('./Routes/customer')
 const brandRoute = require('./Routes/brand')
