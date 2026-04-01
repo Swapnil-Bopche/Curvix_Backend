@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 })
 
 
-app.use('/customer', customerRoute)
+app.use('/customer',VerifyToken, customerRoute)
 app.use('/employee', VerifyToken, employeeRoute)
 app.use('/product', VerifyToken, productrRoute)
 app.use('/tag', tagRoute)
